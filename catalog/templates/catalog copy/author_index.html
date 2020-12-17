@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Author Fan Page</h1>
+    {% if author_stats %}
+    <ul>
+        <li><a href="{{ author.get_absolute_url }}"></a>
+            <li><strong>First Name:</strong> {{ first_name }}</li>
+            <li><strong>Last Name:</strong> {{ last_name }}</li>
+            <li><strong>Birthday:</strong> {{ day_of_birth }}</li>
+            <li><strong>Died:</strong> {{ day_of_death }}</li>
+        </li>
+    </ul>
+    {% else %}
+        <p>There is no info on this author.</p>
+    {% endif %}
+{% endblock %}
